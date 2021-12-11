@@ -7,13 +7,16 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducers/tutorial.reducer';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import {HeroDetailService} from './hero-detail.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadComponent,
-    CreateComponent
+    CreateComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { CreateComponent } from './create/create.component';
       tutorial: reducer
     })
   ],
-  providers: [],
+  providers: [HeroDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

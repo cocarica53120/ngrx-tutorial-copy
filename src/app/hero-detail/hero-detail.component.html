@@ -1,0 +1,26 @@
+
+<hr>
+<h1> App Hero Detail </h1>
+
+<p> Result of click on Mon premier Bouton test => {{resultMonClick}} </p>
+<button (click)="onClick($event)"> Mon premier Bouton Test Toggle </button>
+
+<h4> Ma liste de Noms got from the service HeroDetailService (with Promise and after delay of 1 second) </h4>
+<ol>
+  <li *ngFor="let n of this.names">{{n}}</li>
+</ol>
+
+<table border="true">
+  <thead>
+  <th> Last Name </th>
+  <th> First Name </th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let n of this.names">
+    <td>{{n[0]}}</td>
+    <td>{{n[1]}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<hr>

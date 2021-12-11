@@ -1,3 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-create></app-create>
+
+<hr>
+
 <app-read></app-read>
+
+<h1> In App before Hero Detail Component </h1>
+
+<app-hero-detail [name]=title (myOutput)=testMyOutput($event)></app-hero-detail>
+
+<h1> In App after Hero Detail Component </h1>
+<p> <strong> Result of app-hero-detail.myOutput after clicking on Mon premier bouton test => </strong>  {{test}} </p>

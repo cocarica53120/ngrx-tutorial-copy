@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  test: string;
+
+  testMyOutput($event: any) {
+    console.log('testMyOutput', $event);
+    this.test = $event;
+  }
 }
