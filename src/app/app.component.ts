@@ -11,6 +11,6 @@ export class AppComponent {
 
   testMyOutput($event: any) {
     console.log('testMyOutput', $event);
-    this.test = $event;
+    this.test = $event.message;
   }
 }

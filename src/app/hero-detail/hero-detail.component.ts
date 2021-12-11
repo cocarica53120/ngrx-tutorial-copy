@@ -11,7 +11,7 @@ export class HeroDetailComponent implements OnInit {
   private resultMonClick: string;
 
   @Input() name: string;
-  @Output() myOutput: EventEmitter<string> = new EventEmitter();
+  @Output() myOutput: EventEmitter<any> = new EventEmitter();
   names: string[][];
 
   constructor(private heroDetailService: HeroDetailService) {
@@ -26,9 +26,9 @@ export class HeroDetailComponent implements OnInit {
     console.log('names', this.names);
   }
 
-  onClick($event: MouseEvent) {
+  async onClick($event: MouseEvent) {
     console.log('onClick', $event);
     this.resultMonClick = this.resultMonClick === '' ? `J'ai clické sur mon bouton test` : '';
-    this.myOutput.emit(this.heroDetailService.getName());
+    this.myOutput.emit(await this.heroDetailService.getName());
   }
 }
